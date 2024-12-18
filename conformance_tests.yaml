@@ -1505,6 +1505,19 @@
   doc: Test that file path in $(inputs) for initialworkdir is in $(outdir).
   tags: [ initial_work_dir, command_line_tool ]
 
+- job: tests/wc-job.json
+  output:
+    output:
+      checksum: sha1$327fc7aedf4f6b69a42a7c8b808dc5a7aff61376
+      class: File
+      size: 1111
+      location: Any
+      path: Any
+  tool: tests/initialwork-path-2.cwl
+  id: initialworkpath_content
+  doc: Test that file path in $(inputs) for initialworkdir is in $(outdir) and has the correct content.
+  tags: [ initial_work_dir, command_line_tool ]
+
 - job: tests/count-lines6-job.json
   output:
     count_output: 34
